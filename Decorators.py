@@ -119,4 +119,4 @@ if __name__ == '__main__':
     def run_training(model, **kwargs):
         print("Training, validation, and testing completed!")
 
-    run_training(model, train_loader=train_loader, val_loader=val_loader, test_loader=test_loader, validate_func=Validation(criterion=criterion, device="cpu")(lambda *args, **kwargs: None))
+    run_training(model, train_loader=train_loader, val_loader=val_loader, test_loader=test_loader, validate_func=Validation(criterion=criterion, device="cpu")(lambda model, **kwargs: None))
