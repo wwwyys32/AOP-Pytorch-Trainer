@@ -1,4 +1,4 @@
-# AOP Decorators - A simple implementation for Pytorch Trainer
+# AOP Annotations - A simple implementation for Pytorch Trainer
 
 This document provides a detailed explanation of the PyTorch training and evaluation decorators implemented in the provided code. These decorators are designed to simplify the process of training, validating, and testing PyTorch models by encapsulating common functionality and allowing for reusable and modular code.
 
