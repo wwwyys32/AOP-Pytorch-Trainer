@@ -40,7 +40,7 @@ def Train(optimizer: torch.optim.Optimizer, criterion: Callable, epochs: int, va
 def Validation(criterion: Callable, device: str = "cpu")->Callable:
     def decorator_validate(func: Callable):
         def wrapper(*args, **kwargs):
-            model = args[0]  # 假设模型是第一个参数
+            model = args[0]
             val_loader = kwargs.get("val_loader")
             if val_loader is None:
                 raise ValueError("val_loader must be provided as a keyword argument")
@@ -63,7 +63,7 @@ def Validation(criterion: Callable, device: str = "cpu")->Callable:
 def Test(device: str = "cpu")->Callable:
     def decorator_test(func: Callable):
         def wrapper(*args, **kwargs):
-            model = args[0]  # 假设模型是第一个参数
+            model = args[0]
             test_loader = kwargs.get("test_loader")
             if test_loader is None:
                 raise ValueError("test_loader must be provided as a keyword argument")
